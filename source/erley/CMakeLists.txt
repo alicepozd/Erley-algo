@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+set(CMAKE_CXX_STANDARD 14)
+add_library(erley erley.h erley.cpp)
+add_executable(erley_test test.cpp)
+target_link_libraries(erley_test erley)
