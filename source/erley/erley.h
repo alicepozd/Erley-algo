@@ -90,7 +90,7 @@ public:
      * @param word слово из терминальных символов
      * @return 0, если слово не лежит в грамматике, и 1 иначе
      */
-    bool predict(std::string word);
+    bool predict(const std::string& word);
 private:
     bool Predict(int D_index);
 

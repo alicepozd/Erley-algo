@@ -35,7 +35,7 @@ bool operator==(const Rule& first, const Rule& second)
 }
 
 
-Situation::Situation(Rule  rule, int point_index, int begin_symb_numb) :
+Situation::Situation(Rule rule, int point_index, int begin_symb_numb) :
         rule(std::move(rule)), point_index(point_index), begin_symb_numb(begin_symb_numb) {}
 
 
@@ -63,7 +63,7 @@ void Erley::set_grammar(const std::set<std::string>& new_grammar)
 }
 
 
-bool Erley::predict(std::string word) 
+bool Erley::predict(const std::string& word) 
 {
     D.resize(word.size() + 1);
     D[0].insert(Situation(Rule('\0', "S"), 0, 0));
